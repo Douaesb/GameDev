@@ -1,13 +1,28 @@
 package com.gameDev;
 
+import com.gameDev.entity.Game;
+import com.gameDev.service.GameService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args)  {
 
-         final Logger logger = LoggerFactory.getLogger(Main.class);
-        //logger.info("logger initialized.");
+        // Load application context from XML file
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        // Get the GameService bean
+        GameService gameService = (GameService) context.getBean("gameService");
+
+        // Example: Create a new Game
+        Game newGame = new Game("test2", "Hard", 30.5);
+        gameService.createGame(newGame);
+        Game newGame2 = new Game("test1", "Hard", 30.5);
+        gameService.createGame(newGame2);
+        // Example: Retrieve all games
+        System.out.println("All Games: " + gameService.findAllGames());
 
 
 

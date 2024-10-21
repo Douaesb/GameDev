@@ -69,4 +69,14 @@ public class Game {
     public void setMatchAvgDuration(Double matchAvgDuration) {
         this.matchAvgDuration = matchAvgDuration;
     }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", difficulty='" + difficulty + '\'' +
+                ", matchAvgDuration=" + matchAvgDuration +
+                '}';
+    }
 }
