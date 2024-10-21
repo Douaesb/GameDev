@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args)  {
 
          final Logger logger = LoggerFactory.getLogger(Main.class);
-        logger.info("logger initialized.");
+        //logger.info("logger initialized.");
 
 
 
