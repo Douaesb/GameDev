@@ -34,8 +34,17 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
+    <!-- Game DAO Bean -->
+    <bean id="gameDao" class="com.gameDev.dao.impl.GameDaoImpl" />
+
+    <!-- Game Service Bean -->
+    <bean id="gameService" class="com.gameDev.service.impl.GameServiceImpl">
+        <constructor-arg ref="gameDao" />
+    </bean>
+
     <!-- DAO and Service Beans (Example with Tournoi) -->
     <bean id="tournamentDao" class="com.gameDev.dao.impl.TournamentDaoImpl"/>
+
     <bean id="tournamentService" class="com.gameDev.service.impl.TournamentServiceImpl">
         <property name="tournamentDao" ref="tournamentDao"/>
     </bean>
