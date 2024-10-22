@@ -42,6 +42,24 @@
         <constructor-arg ref="gameDao" />
     </bean>
 
+
+    <!-- Team DAO Bean -->
+    <bean id="teamDao" class="com.gameDev.dao.impl.TeamDaoImpl" />
+
+    <!-- Team Service Bean -->
+    <bean id="teamService" class="com.gameDev.service.impl.TeamServiceImpl">
+        <constructor-arg ref="teamDao" />
+    </bean>
+
+    <!-- Player DAO Bean -->
+    <bean id="playerDao" class="com.gameDev.dao.impl.PlayerDaoImpl" />
+
+    <!-- Player Service Bean -->
+    <bean id="playerService" class="com.gameDev.service.impl.PlayerServiceImpl">
+        <constructor-arg ref="playerDao" />
+    </bean>
+
+
     <!-- DAO and Service Beans (Example with Tournoi) -->
     <bean id="tournamentDao" class="com.gameDev.dao.impl.TournamentDaoImpl"/>
 
