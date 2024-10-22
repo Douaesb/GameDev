@@ -1,6 +1,7 @@
 package com.gameDev.dao.impl;
 
 import com.gameDev.dao.TournamentDao;
+import com.gameDev.entity.Team;
 import com.gameDev.entity.Tournament;
 import com.gameDev.util.JPAUtil;
 import org.slf4j.Logger;
@@ -102,4 +103,72 @@ public class TournamentDaoImpl implements TournamentDao {
             entityManager.close();
         }
     }
+
+    @Override
+    public void assignTeamToTournament(int tournamentId, int teamId) {
+        EntityManager entityManager = JPAUtil.getEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+
+        try {
+            transaction.begin();
+
+            Tournament tournament = entityManager.find(Tournament.class, tournamentId);
+            Team team = entityManager.find(Team.class, teamId);
+
+            if (tournament == null) {
+                logger.warn("Tournament with ID {} not found.", tournamentId);
+                return;
+            }
+
+            if (team == null) {
+                logger.warn("Team with ID {} not found.", teamId);
+                return;
+            }
+
+            tournament.addTeam(team);
+            entityManager.merge(tournament);
+            transaction.commit();
+            logger.info("Team with ID {} assigned to tournament with ID {}", teamId, tournamentId);
+
+        } catch (RuntimeException e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+                logger.error("Transaction rolled back while assigning team with ID {} to tournament with ID {}: {}", teamId, tournamentId, e.getMessage());
+            }
+            throw e; // Rethrow to handle it at a higher level
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    @Override
+    public void removeTeamFromTournament(int tournamentId, Team team) {
+        EntityManager entityManager = JPAUtil.getEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+
+        try {
+            transaction.begin();
+
+            Tournament tournament = entityManager.find(Tournament.class, tournamentId);
+            if (tournament == null) {
+                logger.warn("Tournament with ID {} not found.", tournamentId);
+                return;
+            }
+
+            tournament.removeTeam(team);
+            entityManager.merge(tournament);
+            transaction.commit();
+            logger.info("Team removed from tournament with ID {}", tournamentId);
+
+        } catch (RuntimeException e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+                logger.error("Transaction rolled back while removing team from tournament with ID {}: {}", tournamentId, e.getMessage());
+            }
+            throw e; // Rethrow to handle it at a higher level
+        } finally {
+            entityManager.close();
+        }
+    }
+
 }

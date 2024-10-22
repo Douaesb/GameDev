@@ -1,6 +1,7 @@
 package com.gameDev.service.impl;
 
 import com.gameDev.dao.TournamentDao;
+import com.gameDev.entity.Team;
 import com.gameDev.entity.Tournament;
 import com.gameDev.service.TournamentService;
 import org.slf4j.Logger;
@@ -48,5 +49,15 @@ public class TournamentServiceImpl implements TournamentService {
     public void deleteTournament(int id) {
         tournamentDao.deleteTournament(id);
         logger.info("Tournament deleted with ID: {}", id);
+    }
+
+    @Override
+    public void assignTeamToTournament(int tournamentId, int team) {
+        tournamentDao.assignTeamToTournament(tournamentId, team);
+    }
+
+    @Override
+    public void removeTeamFromTournament(int tournamentId, Team team) {
+        tournamentDao.removeTeamFromTournament(tournamentId, team);
     }
 }
