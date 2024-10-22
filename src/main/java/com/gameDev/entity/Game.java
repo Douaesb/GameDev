@@ -18,10 +18,11 @@ public class Game {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @NotNull(message = "Difficulty cannot be null")
-    @Size(min = 3, max = 50, message = "Difficulty must be between 3 and 50 characters")
+
+    @NotNull(message = "difficulty of game cannot be null")
+    @Min(value = 0, message = "difficulty of game must be positive")
     @Column(name = "difficulty", nullable = false)
-    private String difficulty;
+    private Double difficulty;
 
     @NotNull(message = "Match average duration cannot be null")
     @Min(value = 0, message = "Match average duration must be positive")
@@ -44,7 +45,7 @@ public class Game {
         this.tournaments = tournaments;
     }
 
-    public Game(String name, String difficulty, Double matchAvgDuration) {
+    public Game(String name, Double difficulty, Double matchAvgDuration) {
         this.name = name;
         this.difficulty = difficulty;
         this.matchAvgDuration = matchAvgDuration;
@@ -66,11 +67,11 @@ public class Game {
         this.name = name;
     }
 
-    public String getDifficulty() {
+    public Double getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(Double difficulty) {
         this.difficulty = difficulty;
     }
 

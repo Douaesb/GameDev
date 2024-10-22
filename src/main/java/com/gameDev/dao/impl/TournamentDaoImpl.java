@@ -1,6 +1,7 @@
 package com.gameDev.dao.impl;
 
 import com.gameDev.dao.TournamentDao;
+import com.gameDev.entity.Game;
 import com.gameDev.entity.Team;
 import com.gameDev.entity.Tournament;
 import com.gameDev.util.JPAUtil;
@@ -135,7 +136,7 @@ public class TournamentDaoImpl implements TournamentDao {
                 transaction.rollback();
                 logger.error("Transaction rolled back while assigning team with ID {} to tournament with ID {}: {}", teamId, tournamentId, e.getMessage());
             }
-            throw e; // Rethrow to handle it at a higher level
+            throw e;
         } finally {
             entityManager.close();
         }
@@ -172,5 +173,27 @@ public class TournamentDaoImpl implements TournamentDao {
             entityManager.close();
         }
     }
+
+    @Override
+    public double calculateEstimatedDurationTournament(int tournamentId){
+        EntityManager em = JPAUtil.getEntityManager();
+        try{
+            Tournament tournament = em.find(Tournament.class, tournamentId);
+            if (tournament == null) {
+                throw new IllegalArgumentException("Tournament not found with ID: " + tournamentId);
+            }
+            Game game = tournament.getGame();
+            int numberOfTeams = tournament.getTeams().size();
+            double matchDuration = game.getMatchAvgDuration();
+            double breakTime = tournament.getBreakTime();
+
+            double estimatedDuration = (numberOfTeams * matchDuration) + breakTime;
+
+            return estimatedDuration;
+        }finally {
+            em.close();
+        }
+    }
+
 
 }

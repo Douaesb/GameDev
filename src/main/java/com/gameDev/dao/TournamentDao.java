@@ -15,4 +15,6 @@ public interface TournamentDao {
     void assignTeamToTournament(int tournamentId, int team);
 
     void removeTeamFromTournament(int tournamentId, int team);
+
+    double calculateEstimatedDurationTournament(int tournamentId);
 }
