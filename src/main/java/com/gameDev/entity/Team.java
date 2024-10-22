@@ -2,6 +2,7 @@ package com.gameDev.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "teams")
@@ -19,6 +20,28 @@ public class Team {
     @Min(value = 1, message = "Rank must be a positive integer")
     @Column(name = "rank", nullable = false)
     private int rank;
+
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
+    private Set<Player> players;
+
+    @ManyToMany(mappedBy = "teams")
+    private Set<Tournament> tournaments;
+
+    public Set<Tournament> getTournaments() {
+        return tournaments;
+    }
+
+    public void setTournaments(Set<Tournament> tournaments) {
+        this.tournaments = tournaments;
+    }
+
+    public Set<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(Set<Player> players) {
+        this.players = players;
+    }
 
     // Constructors
     public Team() {
@@ -52,5 +75,14 @@ public class Team {
 
     public void setRank(int rank) {
         this.rank = rank;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", rank='" + rank + '\'' +
+                '}';
     }
 }

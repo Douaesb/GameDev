@@ -21,6 +21,18 @@ public class Player {
     @Column(name = "age", nullable = false)
     private int age;
 
+    @ManyToOne
+    @JoinColumn(name = "team_id", nullable = false)
+    private Team team;
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
     // Constructors
     public Player() {
     }
