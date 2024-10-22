@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name = "games")
@@ -28,8 +29,19 @@ public class Game {
     private Double matchAvgDuration;
 
 
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
+    private List<Tournament> tournaments;
+
     // Constructors
     public Game() {
+    }
+
+    public List<Tournament> getTournaments() {
+        return tournaments;
+    }
+
+    public void setTournaments(List<Tournament> tournaments) {
+        this.tournaments = tournaments;
     }
 
     public Game(String name, String difficulty, Double matchAvgDuration) {
