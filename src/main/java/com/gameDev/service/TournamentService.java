@@ -15,4 +15,6 @@ public interface TournamentService {
 
     void removeTeamFromTournament(int tournamentId, int team);
 
+    double getEstimatedDurationTournament(int tournamentId);
+
 }

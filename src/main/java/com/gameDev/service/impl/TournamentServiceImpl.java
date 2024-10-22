@@ -1,6 +1,7 @@
 package com.gameDev.service.impl;
 
 import com.gameDev.dao.TournamentDao;
+import com.gameDev.dao.impl.TournamentDaoExtension;
 import com.gameDev.entity.Team;
 import com.gameDev.entity.Tournament;
 import com.gameDev.service.TournamentService;
@@ -13,10 +14,12 @@ public class TournamentServiceImpl implements TournamentService {
 
     private static final Logger logger = LoggerFactory.getLogger(TournamentServiceImpl.class);
     private final TournamentDao tournamentDao;
+    private final TournamentDaoExtension tournamentDaoExtension;
 
     // Constructor for dependency injection
-    public TournamentServiceImpl(TournamentDao tournamentDao) {
+    public TournamentServiceImpl(TournamentDao tournamentDao, TournamentDaoExtension tournamentDaoExtension) {
         this.tournamentDao = tournamentDao;
+        this.tournamentDaoExtension = tournamentDaoExtension;
     }
 
     @Override
@@ -59,5 +62,15 @@ public class TournamentServiceImpl implements TournamentService {
     @Override
     public void removeTeamFromTournament(int tournamentId, int team) {
         tournamentDao.removeTeamFromTournament(tournamentId, team);
+    }
+
+    @Override
+    public double getEstimatedDurationTournament(int tournamentId) {
+        Tournament tournament = tournamentDao.getTournamentById(tournamentId);
+        if (tournament.getGame().getDifficulty() > 5) {
+            return tournamentDaoExtension.calculateEstimatedDurationTournament(tournamentId);
+        } else {
+            return tournamentDao.calculateEstimatedDurationTournament(tournamentId);
+        }
     }
 }
