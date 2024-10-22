@@ -2370,3 +2370,93 @@ Caused by: org.hibernate.PropertyValueException: not-null property references a 
 2024-10-22 16:11:16 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Spring
 2024-10-22 16:11:16 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 2 tournaments from the database
 2024-10-22 16:11:16 INFO  c.g.s.impl.TournamentServiceImpl - Fetched all tournaments. Total count: 2
+2024-10-22 16:41:12 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:41:12 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-22 16:41:13 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-22 16:41:13 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:41:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-22 16:41:14 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:41:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-22 16:41:14 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:41:14 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-22 16:41:14 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-22 16:41:14 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-22 16:41:14 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-22 16:41:14 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-22 16:41:14 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:41:14 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6325f352] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-22 16:41:14 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:41:14 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 2
+2024-10-22 16:41:14 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 2
+2024-10-22 16:41:14 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-22 16:41:14 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-22 16:41:14 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 2
+2024-10-22 16:41:14 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 2
+2024-10-22 16:44:00 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:44:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-22 16:44:00 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-22 16:44:01 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:44:01 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-22 16:44:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:44:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-22 16:44:02 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:44:02 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-22 16:44:02 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-22 16:44:02 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-22 16:44:02 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-22 16:44:02 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-22 16:44:02 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:44:02 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@19a64eae] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-22 16:44:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:44:02 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 2
+2024-10-22 16:44:02 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 2
+2024-10-22 16:44:02 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-22 16:44:02 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-22 16:44:02 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 2
+2024-10-22 16:44:02 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 2
+2024-10-22 16:48:16 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:48:16 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-22 16:48:16 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-22 16:48:17 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:48:17 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-22 16:48:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:48:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-22 16:48:17 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:48:17 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-22 16:48:17 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-22 16:48:17 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-22 16:48:17 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-22 16:48:17 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-22 16:48:18 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:48:18 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@19a64eae] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-22 16:48:18 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:48:18 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 2
+2024-10-22 16:48:18 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 2
+2024-10-22 16:48:18 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-22 16:48:18 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-22 16:48:18 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 2
+2024-10-22 16:48:18 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 2
+2024-10-22 16:52:20 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:52:20 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-22 16:52:21 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-22 16:52:21 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:52:21 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-22 16:52:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:52:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-22 16:52:22 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-22 16:52:22 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-22 16:52:22 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-22 16:52:22 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-22 16:52:22 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-22 16:52:22 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-22 16:52:22 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-22 16:52:22 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@19a64eae] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-22 16:52:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-22 16:52:22 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 2
+2024-10-22 16:52:22 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 2
+2024-10-22 16:52:22 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-22 16:52:22 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-22 16:52:22 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 2
+2024-10-22 16:52:22 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 2
+2024-10-22 16:52:22 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team with ID 1 assigned to tournament with ID 2
+2024-10-22 16:52:22 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team with ID 2 assigned to tournament with ID 2

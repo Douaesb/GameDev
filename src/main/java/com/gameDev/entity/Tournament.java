@@ -56,7 +56,7 @@ public class Tournament {
     private Game game;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "tournament_team",
             joinColumns = @JoinColumn(name = "tournament_id"),
@@ -64,6 +64,16 @@ public class Tournament {
     )
     private Set<Team> teams;
 
+
+    public void addTeam(Team team) {
+        teams.add(team);
+        team.getTournaments().add(this);
+    }
+
+    public void removeTeam(Team team) {
+        teams.remove(team);
+        team.getTournaments().remove(this);
+    }
 
     public Set<Team> getTeams() {
         return teams;
