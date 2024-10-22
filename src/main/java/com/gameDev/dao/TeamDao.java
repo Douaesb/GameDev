@@ -10,4 +10,6 @@ public interface TeamDao {
     List<Team> getAllTeams();
     void updateTeam(Team team);
     void deleteTeam(int id);
+
+    void changePlayerTeam(int playerId, int newTeamId);
 }
