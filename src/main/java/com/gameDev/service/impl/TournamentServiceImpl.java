@@ -57,7 +57,7 @@ public class TournamentServiceImpl implements TournamentService {
     }
 
     @Override
-    public void removeTeamFromTournament(int tournamentId, Team team) {
+    public void removeTeamFromTournament(int tournamentId, int team) {
         tournamentDao.removeTeamFromTournament(tournamentId, team);
     }
 }

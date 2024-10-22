@@ -25,17 +25,14 @@ public class Main {
 
         Tournament tournament = tournamentService.getTournamentById(2);
         Team team = teamService.getTeamById(1);
-        Team team2 = teamService.getTeamById(2);
 
 
         // Assign team to tournament
-        tournamentService.assignTeamToTournament(tournament.getId(), team.getId());
-        tournamentService.assignTeamToTournament(tournament.getId(), team2.getId());
+        tournamentService.removeTeamFromTournament(tournament.getId(), team.getId());
 
-        System.out.println("Team assigned to tournament: " + team.getName());
 
-        // Optionally, display the teams in the tournament
-        System.out.println("Teams in tournament: " + tournament.getTeams());
+        System.out.println("Team removed from tournament: " + team.getName());
+
     }
 }
 

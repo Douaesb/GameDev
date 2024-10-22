@@ -13,6 +13,6 @@ public interface TournamentService {
     void deleteTournament(int id);
     void assignTeamToTournament(int tournamentId, int team);
 
-    void removeTeamFromTournament(int tournamentId, Team team);
+    void removeTeamFromTournament(int tournamentId, int team);
 
 }

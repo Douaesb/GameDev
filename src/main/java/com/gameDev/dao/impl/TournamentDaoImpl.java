@@ -142,7 +142,7 @@ public class TournamentDaoImpl implements TournamentDao {
     }
 
     @Override
-    public void removeTeamFromTournament(int tournamentId, Team team) {
+    public void removeTeamFromTournament(int tournamentId, int teamId) {
         EntityManager entityManager = JPAUtil.getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
 
@@ -150,6 +150,8 @@ public class TournamentDaoImpl implements TournamentDao {
             transaction.begin();
 
             Tournament tournament = entityManager.find(Tournament.class, tournamentId);
+            Team team = entityManager.find(Team.class, teamId);
+
             if (tournament == null) {
                 logger.warn("Tournament with ID {} not found.", tournamentId);
                 return;
