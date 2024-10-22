@@ -59,12 +59,12 @@
         <constructor-arg ref="playerDao" />
     </bean>
 
+    <!-- Tournament DAO Bean -->
+    <bean id="tournamentDao" class="com.gameDev.dao.impl.TournamentDaoImpl" />
 
-    <!-- DAO and Service Beans (Example with Tournoi) -->
-    <bean id="tournamentDao" class="com.gameDev.dao.impl.TournamentDaoImpl"/>
-
+    <!-- Tournament Service Bean -->
     <bean id="tournamentService" class="com.gameDev.service.impl.TournamentServiceImpl">
-        <property name="tournamentDao" ref="tournamentDao"/>
+        <constructor-arg ref="tournamentDao" />
     </bean>
 
 </beans>
