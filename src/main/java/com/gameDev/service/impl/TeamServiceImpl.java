@@ -47,4 +47,10 @@ public class TeamServiceImpl implements TeamService {
         logger.info("Deleting team with ID: {}", id);
         teamDao.deleteTeam(id);
     }
+
+    @Override
+    public void changePlayerTeam(int playerId, int newTeamId) {
+        logger.info("Assign new team with ID: {} for the player with ID: {}", newTeamId, playerId);
+        teamDao.changePlayerTeam(playerId, newTeamId);
+    }
 }

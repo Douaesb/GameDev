@@ -130,3 +130,6 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/dou
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 49 more
+2024-10-22 18:49:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TEAM" not found; SQL statement:
+select * from team [42102-200]

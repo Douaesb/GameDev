@@ -1,10 +1,12 @@
 package com.gameDev;
 
 import com.gameDev.entity.Game;
+import com.gameDev.entity.Player;
 import com.gameDev.entity.Team;
 import com.gameDev.entity.Tournament;
 import com.gameDev.entity.enums.Status;
 import com.gameDev.service.GameService;
+import com.gameDev.service.PlayerService;
 import com.gameDev.service.TeamService;
 import com.gameDev.service.TournamentService;
 import org.springframework.context.ApplicationContext;
@@ -18,20 +20,19 @@ public class Main {
         // Load application context from XML file
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        // Get the TournamentService and GameService beans
-        TournamentService tournamentService = (TournamentService) context.getBean("tournamentService");
+
         TeamService teamService = (TeamService) context.getBean("teamService");
+        PlayerService playerService = (PlayerService) context.getBean("playerService");
 
 
-        Tournament tournament = tournamentService.getTournamentById(2);
-        Team team = teamService.getTeamById(1);
+        Team team = teamService.getTeamById(4);
+        Player player = playerService.getPlayerById(2);
+
+        // Assign new team to player
+        teamService.changePlayerTeam(player.getId(), team.getId());
 
 
-        // Assign team to tournament
-        tournamentService.removeTeamFromTournament(tournament.getId(), team.getId());
-
-
-        System.out.println("Team removed from tournament: " + team.getName());
+        System.out.println("player with new team : " + player.getNickName());
 
     }
 }
