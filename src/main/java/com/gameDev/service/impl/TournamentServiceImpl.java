@@ -37,9 +37,7 @@ public class TournamentServiceImpl implements TournamentService {
 
     @Override
     public List<Tournament> getAllTournaments() {
-        List<Tournament> tournaments = tournamentDao.getAllTournaments();
-        logger.info("Fetched all tournaments. Total count: {}", tournaments.size());
-        return tournaments;
+        return tournamentDao.getAllTournaments();
     }
 
     @Override
@@ -66,11 +64,6 @@ public class TournamentServiceImpl implements TournamentService {
 
     @Override
     public double getEstimatedDurationTournament(int tournamentId) {
-        Tournament tournament = tournamentDao.getTournamentById(tournamentId);
-        if (tournament.getGame().getDifficulty() > 5) {
             return tournamentDaoExtension.calculateEstimatedDurationTournament(tournamentId);
-        } else {
-            return tournamentDao.calculateEstimatedDurationTournament(tournamentId);
-        }
     }
 }
