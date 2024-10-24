@@ -102,7 +102,7 @@ public class GameDaoImpl implements GameDao {
             }
             throw e;
         } finally {
-            entityManager.close();
+            entityManager   .close();
         }
     }
 }

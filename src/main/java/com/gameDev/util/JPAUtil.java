@@ -12,7 +12,8 @@ public class JPAUtil {
 
     static {
         try {
-            entityManagerFactory = Persistence.createEntityManagerFactory("GameDev");
+            String persistentUnitName = System.getProperty("puName", "GameDev");
+            entityManagerFactory = Persistence.createEntityManagerFactory(persistentUnitName);
         } catch (Exception ex) {
             ex.printStackTrace();
             throw new ExceptionInInitializerError("EntityManagerFactory initialization failed.");
