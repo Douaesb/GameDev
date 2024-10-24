@@ -66,4 +66,13 @@ public class Player {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + nickName + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }
