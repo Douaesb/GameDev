@@ -34,6 +34,7 @@
 
     <!-- DAO and Service Beans for testing -->
     <bean id="gameDao" class="com.gameDev.dao.impl.GameDaoImpl" />
+
     <bean id="testGameService" class="com.gameDev.service.impl.GameServiceImpl">
         <constructor-arg ref="gameDao"/>
     </bean>
@@ -45,4 +46,25 @@
     <bean id="testTeamService" class="com.gameDev.service.impl.TeamServiceImpl">
         <constructor-arg ref="teamDao"/>
     </bean>
+
+    <!-- DAO Bean for player -->
+    <bean id="playerDao" class="com.gameDev.dao.impl.PlayerDaoImpl" />
+
+    <!-- Service Bean for testing -->
+    <bean id="testPlayerService" class="com.gameDev.service.impl.PlayerServiceImpl">
+        <constructor-arg ref="playerDao"/>
+    </bean>
+
+    <!-- Tournament DAO Bean -->
+    <bean id="tournamentDao" class="com.gameDev.dao.impl.TournamentDaoImpl" />
+
+    <bean id="tournamentDaoExtension" class="com.gameDev.dao.impl.TournamentDaoExtension">
+        <constructor-arg ref="tournamentDao" />
+    </bean>
+    <!-- Tournament Service Bean -->
+    <bean id="testTournamentService" class="com.gameDev.service.impl.TournamentServiceImpl">
+        <constructor-arg ref="tournamentDao" />
+        <constructor-arg ref="tournamentDaoExtension" />
+    </bean>
+
 </beans>
