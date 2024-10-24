@@ -37,4 +37,12 @@
     <bean id="testGameService" class="com.gameDev.service.impl.GameServiceImpl">
         <constructor-arg ref="gameDao"/>
     </bean>
+
+    <!-- DAO Bean for Team -->
+    <bean id="teamDao" class="com.gameDev.dao.impl.TeamDaoImpl" />
+
+    <!-- Service Bean for testing -->
+    <bean id="testTeamService" class="com.gameDev.service.impl.TeamServiceImpl">
+        <constructor-arg ref="teamDao"/>
+    </bean>
 </beans>
