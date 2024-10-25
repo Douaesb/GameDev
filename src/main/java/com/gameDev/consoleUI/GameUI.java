@@ -2,17 +2,17 @@ package com.gameDev.consoleUI;
 
 import com.gameDev.entity.Game;
 import com.gameDev.service.GameService;
+import com.gameDev.util.InputValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class GameUI {
 
     private static final Logger logger = LoggerFactory.getLogger(GameUI.class);
     private final GameService gameService;
-    private final Scanner scanner = new Scanner(System.in);
 
     public GameUI(ApplicationContext context) {
         // Retrieve GameService bean from application context
@@ -23,7 +23,7 @@ public class GameUI {
         int choice;
         do {
             printMenu();
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = InputValidator.validatePositiveInteger("Choose an option: ");
             switch (choice) {
                 case 1:
                     createGame();
@@ -57,19 +57,20 @@ public class GameUI {
         System.out.println("4. Update Game");
         System.out.println("5. Delete Game");
         System.out.println("6. Exit");
-        System.out.print("Choose an option: ");
     }
 
     private void createGame() {
         System.out.println("===== Create New Game =====");
-        System.out.print("Enter game name: ");
-        String name = scanner.nextLine();
 
-        System.out.print("Enter game difficulty: ");
-        double difficulty = Double.parseDouble(scanner.nextLine());
+        List<String> existingNicknames = gameService.findAllGames().stream()
+                .map(Game::getName)
+                .collect(Collectors.toList());
 
-        System.out.print("Enter average match duration: ");
-        double duration = Double.parseDouble(scanner.nextLine());
+
+        String name = InputValidator.validateUniqueName("Enter game name: ", existingNicknames);
+
+        double difficulty = InputValidator.validatePositiveDouble("Enter game difficulty (positive number): ");
+        double duration = InputValidator.validatePositiveDouble("Enter average match duration (positive number): ");
 
         Game newGame = new Game(name, difficulty, duration);
         gameService.createGame(newGame);
@@ -79,9 +80,7 @@ public class GameUI {
     }
 
     private void findGameById() {
-        System.out.print("Enter game ID: ");
-        int id = Integer.parseInt(scanner.nextLine());
-
+        int id = InputValidator.validatePositiveInteger("Enter game ID: ");
         Game game = gameService.findGameById(id);
         if (game != null) {
             System.out.println("Game found: " + game);
@@ -101,23 +100,22 @@ public class GameUI {
     }
 
     private void updateGame() {
-        System.out.print("Enter the ID of the game you want to update: ");
-        int id = Integer.parseInt(scanner.nextLine());
-
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the game you want to update: ");
         Game game = gameService.findGameById(id);
         if (game == null) {
             System.out.println("Game with ID " + id + " not found.");
             return;
         }
 
-        System.out.print("Enter new game name: ");
-        String name = scanner.nextLine();
+        List<String> existingNicknames = gameService.findAllGames().stream()
+                .map(Game::getName)
+                .collect(Collectors.toList());
 
-        System.out.print("Enter new game difficulty: ");
-        double difficulty = Double.parseDouble(scanner.nextLine());
 
-        System.out.print("Enter new average match duration: ");
-        double duration = Double.parseDouble(scanner.nextLine());
+        String name = InputValidator.validateUniqueName("Enter game name: ", existingNicknames);
+
+        double difficulty = InputValidator.validatePositiveDouble("Enter new game difficulty (positive number): ");
+        double duration = InputValidator.validatePositiveDouble("Enter new average match duration (positive number): ");
 
         game.setName(name);
         game.setDifficulty(difficulty);
@@ -129,9 +127,7 @@ public class GameUI {
     }
 
     private void deleteGame() {
-        System.out.print("Enter the ID of the game you want to delete: ");
-        int id = Integer.parseInt(scanner.nextLine());
-
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the game you want to delete: ");
         gameService.deleteGameById(id);
         System.out.println("Game deleted successfully.");
         logger.info("Deleted game with ID: {}", id);

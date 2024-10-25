@@ -2,18 +2,18 @@ package com.gameDev.consoleUI;
 
 import com.gameDev.entity.Team;
 import com.gameDev.service.TeamService;
+import com.gameDev.util.InputValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class TeamUI {
 
     private static final Logger logger = LoggerFactory.getLogger(TeamUI.class);
     private final TeamService teamService;
-    private final Scanner scanner = new Scanner(System.in);
 
     public TeamUI(ApplicationContext context) {
         // Retrieve TeamService bean from application context
@@ -24,7 +24,7 @@ public class TeamUI {
         int choice;
         do {
             printMenu();
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = InputValidator.validatePositiveInteger("Choose an option: ");
             switch (choice) {
                 case 1:
                     createTeam();
@@ -62,16 +62,18 @@ public class TeamUI {
         System.out.println("5. Delete Team");
         System.out.println("6. Change Player's Team");
         System.out.println("7. Exit");
-        System.out.print("Choose an option: ");
     }
 
     private void createTeam() {
         System.out.println("===== Create New Team =====");
-        System.out.print("Enter team name: ");
-        String name = scanner.nextLine();
 
-        System.out.print("Enter team rank: ");
-        int rank = Integer.parseInt(scanner.nextLine());
+        List<String> existingNicknames = teamService.getAllTeams().stream()
+                .map(Team::getName)
+                .collect(Collectors.toList());
+
+        String name = InputValidator.validateUniqueName("Enter team name: ", existingNicknames);
+
+        int rank = InputValidator.validatePositiveInteger("Enter team rank: ");
 
         Team newTeam = new Team(name, rank);
         teamService.createTeam(newTeam);
@@ -81,8 +83,7 @@ public class TeamUI {
     }
 
     private void findTeamById() {
-        System.out.print("Enter team ID: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = InputValidator.validatePositiveInteger("Enter team ID: ");
 
         Team team = teamService.getTeamById(id);
         if (team != null) {
@@ -103,8 +104,7 @@ public class TeamUI {
     }
 
     private void updateTeam() {
-        System.out.print("Enter the ID of the team you want to update: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the team you want to update: ");
 
         Team team = teamService.getTeamById(id);
         if (team == null) {
@@ -112,11 +112,14 @@ public class TeamUI {
             return;
         }
 
-        System.out.print("Enter new team name: ");
-        String name = scanner.nextLine();
+        List<String> existingNicknames = teamService.getAllTeams().stream()
+                .map(Team::getName)
+                .collect(Collectors.toList());
 
-        System.out.print("Enter new team rank: ");
-        int rank = Integer.parseInt(scanner.nextLine());
+
+        String name = InputValidator.validateUniqueName("Enter team name: ", existingNicknames);
+
+        int rank = InputValidator.validatePositiveInteger("Enter new team rank: ");
 
         team.setName(name);
         team.setRank(rank);
@@ -127,8 +130,7 @@ public class TeamUI {
     }
 
     private void deleteTeam() {
-        System.out.print("Enter the ID of the team you want to delete: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the team you want to delete: ");
 
         teamService.deleteTeam(id);
         System.out.println("Team deleted successfully.");
@@ -136,11 +138,8 @@ public class TeamUI {
     }
 
     private void changePlayerTeam() {
-        System.out.print("Enter player ID: ");
-        int playerId = Integer.parseInt(scanner.nextLine());
-
-        System.out.print("Enter the new team ID: ");
-        int newTeamId = Integer.parseInt(scanner.nextLine());
+        int playerId = InputValidator.validatePositiveInteger("Enter player ID: ");
+        int newTeamId = InputValidator.validatePositiveInteger("Enter the new team ID: ");
 
         teamService.changePlayerTeam(playerId, newTeamId);
         System.out.println("Player's team changed successfully.");

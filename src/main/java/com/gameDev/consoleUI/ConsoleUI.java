@@ -1,5 +1,6 @@
 package com.gameDev.consoleUI;
 
+import com.gameDev.util.InputValidator;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Scanner;
@@ -29,8 +30,7 @@ public class ConsoleUI {
             System.out.println("4. Manage Tournaments");
             System.out.println("5. Exit");
 
-            System.out.print("Enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = InputValidator.validatePositiveInteger("Choose an option: ");
 
             switch (choice) {
                 case 1:

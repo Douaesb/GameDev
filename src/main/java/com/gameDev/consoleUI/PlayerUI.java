@@ -2,15 +2,16 @@ package com.gameDev.consoleUI;
 
 import com.gameDev.entity.Team;
 import com.gameDev.entity.Player;
-import com.gameDev.entity.Team;
 import com.gameDev.service.PlayerService;
 import com.gameDev.service.TeamService;
+import com.gameDev.util.InputValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class PlayerUI {
 
@@ -29,7 +30,7 @@ public class PlayerUI {
         int choice;
         do {
             printMenu();
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = InputValidator.validatePositiveInteger("Choose an option: ");
             switch (choice) {
                 case 1:
                     createPlayer();
@@ -63,28 +64,19 @@ public class PlayerUI {
         System.out.println("4. Update Player");
         System.out.println("5. Delete Player");
         System.out.println("6. Exit");
-        System.out.print("Choose an option: ");
     }
 
     private void createPlayer() {
         System.out.println("===== Create New Player =====");
 
-        System.out.print("Enter player nickname: ");
-        String nickName = scanner.nextLine().trim();
+        // Get existing player nicknames
+        List<String> existingNicknames = playerService.getAllPlayers().stream()
+                .map(Player::getNickName)
+                .collect(Collectors.toList());
 
-        System.out.print("Enter player age: ");
-        int age;
-        while (true) {
-            try {
-                age = Integer.parseInt(scanner.nextLine().trim());
-                if (age <= 0) {
-                    throw new NumberFormatException();
-                }
-                break;
-            } catch (NumberFormatException e) {
-                System.out.print("Invalid age. Please enter a positive integer for age: ");
-            }
-        }
+        String nickName = InputValidator.validateUniqueName("Enter player nickname: ", existingNicknames);
+
+        int age = InputValidator.validateAge("Enter player age: ");
 
         Player newPlayer = new Player(nickName, age);
 
@@ -103,8 +95,7 @@ public class PlayerUI {
     }
 
     private void findPlayerById() {
-        System.out.print("Enter player ID: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = InputValidator.validatePositiveInteger("Enter player ID: ");
 
         Player player = playerService.getPlayerById(id);
         if (player != null) {
@@ -125,23 +116,21 @@ public class PlayerUI {
     }
 
     private void updatePlayer() {
-        System.out.print("Enter the ID of the player you want to update: ");
-        int id = Integer.parseInt(scanner.nextLine());
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the player you want to update: ");
 
         Player player = playerService.getPlayerById(id);
         if (player == null) {
             System.out.println("Player with ID " + id + " not found.");
             return;
         }
+        List<String> existingNicknames = playerService.getAllPlayers().stream()
+                .map(Player::getNickName)
+                .collect(Collectors.toList());
 
-        System.out.print("Enter new nickname: ");
-        String nickName = scanner.nextLine();
+        String nickName = InputValidator.validateUniqueName("Enter new nickname: ", existingNicknames);
 
-        System.out.print("Enter new age: ");
-        int age = Integer.parseInt(scanner.nextLine());
-
-        System.out.print("Enter new team ID for the player: ");
-        int teamId = Integer.parseInt(scanner.nextLine());
+        int age = InputValidator.validateAge("Enter new age: ");
+        int teamId = InputValidator.validatePositiveInteger("Enter new team ID for the player: ");
 
         Team team = teamService.getTeamById(teamId);
         if (team == null) {
@@ -159,9 +148,7 @@ public class PlayerUI {
     }
 
     private void deletePlayer() {
-        System.out.print("Enter the ID of the player you want to delete: ");
-        int id = Integer.parseInt(scanner.nextLine());
-
+        int id = InputValidator.validatePositiveInteger("Enter the ID of the player you want to delete: ");
         playerService.deletePlayer(id);
         System.out.println("Player deleted successfully.");
         logger.info("Deleted player with ID: {}", id);
@@ -180,8 +167,7 @@ public class PlayerUI {
                     i + 1, teams.get(i).getName(), teams.get(i).getRank());
         }
 
-        System.out.print("Select a team by number: ");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = InputValidator.validatePositiveInteger("Select a team by number: ");
 
         if (choice < 1 || choice > teams.size()) {
             System.out.println("Invalid selection. No team updated.");
