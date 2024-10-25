@@ -6,7 +6,9 @@ import com.gameDev.entity.Tournament;
 import java.util.List;
 
 public interface TournamentDao {
-    void saveTournament(Tournament tournament);
+//   void saveTournament(Tournament tournament);
+    int saveTournament(Tournament tournament);
+
     Tournament getTournamentById(int id);
     List<Tournament> getAllTournaments();
     void updateTournament(Tournament tournament);

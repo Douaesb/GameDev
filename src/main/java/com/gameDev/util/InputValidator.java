@@ -2,8 +2,10 @@ package com.gameDev.util;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class InputValidator {
     private static final Scanner scanner = new Scanner(System.in);
@@ -109,6 +111,19 @@ public class InputValidator {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid integer for age.");
+            }
+        }
+    }
+
+    public static <E extends Enum<E>> E validateEnum(Class<E> enumClass, String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine().toUpperCase();
+            try {
+                return Enum.valueOf(enumClass, input);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input. Please enter one of the following: " +
+                        String.join(", ", EnumSet.allOf(enumClass).stream().map(Enum::name).collect(Collectors.toList())));
             }
         }
     }

@@ -85,18 +85,27 @@ public class TournamentUI {
         tournament.setStartDate(InputValidator.validateDate("Enter start date"));
         tournament.setEndDate(InputValidator.validateEndDateAfterStartDate(tournament.getStartDate(), "Enter end date"));
         tournament.setNumSpectators(InputValidator.validatePositiveInteger("Enter number of spectators: "));
-        tournament.setDuration(InputValidator.validatePositiveInteger("Enter duration (in hours): "));
-        tournament.setBreakTime(InputValidator.validatePositiveInteger("Enter break time (in minutes): "));
-        tournament.setCeremonyTime(InputValidator.validatePositiveInteger("Enter ceremony time (in minutes): "));
+//        tournament.setDuration(InputValidator.validatePositiveInteger("Enter duration (in hours): "));
+        tournament.setBreakTime(InputValidator.validatePositiveInteger("Enter break time : "));
+        tournament.setCeremonyTime(InputValidator.validatePositiveInteger("Enter ceremony time : "));
+
         Game game = selectGame();
 
         if (game != null) {
             tournament.setGame(game);
         }
         tournament.setStatus(readStatus());
+tournament.setDuration(0);
+        int tournamentId = tournamentService.createTournament(tournament);
 
-        tournamentService.createTournament(tournament);
-        System.out.println("Tournament created successfully!");
+
+        if(tournamentId != 0){
+            tournament.setId(tournamentId);
+            double estimatedDuration = tournamentService.getEstimatedDurationTournament(tournamentId);
+            tournament.setDuration((int) estimatedDuration);
+            tournamentService.updateTournament(tournament);
+            System.out.println("Tournament created successfully!");
+        }
     }
 
     private void viewAllTournaments() {
@@ -121,18 +130,22 @@ public class TournamentUI {
         Tournament tournament = getTournamentIfExists(id);
         if (tournament != null) {
             System.out.println("Updating details for tournament: " + tournament.getTitle());
-            tournament.setTitle(InputValidator.validateString("Enter new title or press Enter to keep [" + tournament.getTitle() + "]: "));
-            tournament.setStartDate(InputValidator.validateDate("Enter new start date or press Enter to keep [" + tournament.getStartDate() + "]: "));
+            tournament.setTitle(InputValidator.validateString("Enter new title  [" + tournament.getTitle() + "]: "));
+            tournament.setStartDate(InputValidator.validateDate("Enter new start date  [" + tournament.getStartDate() + "]: "));
             tournament.setEndDate(InputValidator.validateEndDateAfterStartDate(tournament.getStartDate(), "Enter new end date"));
             tournament.setNumSpectators(InputValidator.validatePositiveInteger("Enter new number of spectators: "));
-            tournament.setDuration(InputValidator.validatePositiveInteger("Enter new duration (in hours): "));
-            tournament.setBreakTime(InputValidator.validatePositiveInteger("Enter new break time (in minutes): "));
-            tournament.setCeremonyTime(InputValidator.validatePositiveInteger("Enter new ceremony time (in minutes): "));
+//            tournament.setDuration(InputValidator.validatePositiveInteger("Enter new duration (in hours): "));
+            tournament.setBreakTime(InputValidator.validatePositiveInteger("Enter new break time : "));
+            tournament.setCeremonyTime(InputValidator.validatePositiveInteger("Enter new ceremony time : "));
             tournament.setStatus(readStatus());
             Game game = selectGame();
             if (game != null) {
                 tournament.setGame(game);
             }
+            tournamentService.updateTournament(tournament);
+
+            tournament.setDuration((int)  tournamentService.getEstimatedDurationTournament(tournament.getId()));
+
             tournamentService.updateTournament(tournament);
             System.out.println("Tournament updated successfully!");
         }
@@ -150,8 +163,13 @@ public class TournamentUI {
     private void assignTeamToTournament() {
         int tournamentId = InputValidator.validatePositiveInteger("Enter tournament ID: ");
         int teamId = InputValidator.validatePositiveInteger("Enter team ID to assign: ");
-        if (getTournamentIfExists(tournamentId) != null && getTeamIfExists(teamId) != null) {
+        Tournament tournament = getTournamentIfExists(tournamentId);
+        if (tournament != null && getTeamIfExists(teamId) != null) {
             tournamentService.assignTeamToTournament(tournamentId, teamId);
+
+            tournament.setDuration((int)  tournamentService.getEstimatedDurationTournament(tournament.getId()));
+            tournamentService.updateTournament(tournament);
+
             System.out.println("Team assigned to tournament successfully.");
         }
     }
@@ -159,8 +177,13 @@ public class TournamentUI {
     private void removeTeamFromTournament() {
         int tournamentId = InputValidator.validatePositiveInteger("Enter tournament ID: ");
         int teamId = InputValidator.validatePositiveInteger("Enter team ID to remove: ");
-        if (getTournamentIfExists(tournamentId) != null && getTeamIfExists(teamId) != null) {
+        Tournament tournament = getTournamentIfExists(tournamentId);
+        if (tournament != null && getTeamIfExists(teamId) != null) {
             tournamentService.removeTeamFromTournament(tournamentId, teamId);
+
+            tournament.setDuration((int)  tournamentService.getEstimatedDurationTournament(tournament.getId()));
+            tournamentService.updateTournament(tournament);
+
             System.out.println("Team removed from tournament successfully.");
         }
     }
@@ -206,7 +229,7 @@ public class TournamentUI {
     private Status readStatus() {
         while (true) {
             try {
-                return Status.valueOf(InputValidator.validateString("Enter tournament status (PLANNED, ONGOING, FINISHED, CANCELLED): ").toUpperCase());
+                return InputValidator.validateEnum(Status.class, "Enter tournament status (PLANNED, ONGOING, FINISHED, CANCELLED): ");
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid status. Please enter one of PLANNED, ONGOING, FINISHED, CANCELLED.");
             }

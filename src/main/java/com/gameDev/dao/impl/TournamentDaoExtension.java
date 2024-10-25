@@ -17,8 +17,8 @@ public class TournamentDaoExtension implements TournamentDao {
 
     // Delegate the core methods to TournamentDaoImpl
     @Override
-    public void saveTournament(Tournament tournament) {
-        tournamentDaoImpl.saveTournament(tournament);  // Reuse the implementation
+    public int saveTournament(Tournament tournament) {
+        return tournamentDaoImpl.saveTournament(tournament);  // Reuse the implementation
     }
 
     @Override

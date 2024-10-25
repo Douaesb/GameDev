@@ -23,9 +23,9 @@ public class TournamentServiceImpl implements TournamentService {
     }
 
     @Override
-    public void createTournament(Tournament tournament) {
-        tournamentDao.saveTournament(tournament);
+    public int createTournament(Tournament tournament) {
         logger.info("Tournament created: {}", tournament.getTitle());
+       return  tournamentDao.saveTournament(tournament);
     }
 
     @Override

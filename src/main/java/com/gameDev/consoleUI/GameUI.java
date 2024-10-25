@@ -69,8 +69,8 @@ public class GameUI {
 
         String name = InputValidator.validateUniqueName("Enter game name: ", existingNicknames);
 
-        double difficulty = InputValidator.validatePositiveDouble("Enter game difficulty (positive number): ");
-        double duration = InputValidator.validatePositiveDouble("Enter average match duration (positive number): ");
+        double difficulty = InputValidator.validatePositiveDouble("Enter game difficulty : ");
+        double duration = InputValidator.validatePositiveDouble("Enter average match duration : ");
 
         Game newGame = new Game(name, difficulty, duration);
         gameService.createGame(newGame);
@@ -114,8 +114,8 @@ public class GameUI {
 
         String name = InputValidator.validateUniqueName("Enter game name: ", existingNicknames);
 
-        double difficulty = InputValidator.validatePositiveDouble("Enter new game difficulty (positive number): ");
-        double duration = InputValidator.validatePositiveDouble("Enter new average match duration (positive number): ");
+        double difficulty = InputValidator.validatePositiveDouble("Enter new game difficulty : ");
+        double duration = InputValidator.validatePositiveDouble("Enter new average match duration : ");
 
         game.setName(name);
         game.setDifficulty(difficulty);

@@ -323,3 +323,558 @@ java.lang.NullPointerException: null
 2024-10-25 11:30:01 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team with ID 8 assigned to tournament with ID 4
 2024-10-25 11:30:09 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 4
 2024-10-25 11:30:09 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 4
+2024-10-25 14:29:00 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:29:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 14:29:00 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 14:29:01 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:29:01 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 14:29:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:29:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 14:29:23 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:29:23 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 14:29:23 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 14:29:23 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 14:29:23 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 14:29:23 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 14:29:23 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:29:23 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fcd7d3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 14:29:23 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:29:23 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 11 players from the database
+2024-10-25 14:29:53 INFO  c.g.service.impl.TeamServiceImpl - Fetching all teams
+2024-10-25 14:29:53 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved 5 teams from the database
+2024-10-25 14:30:29 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: DCDù*ù*
+2024-10-25 14:30:29 INFO  com.gameDev.consoleUI.PlayerUI - Created new player: Player{id=45, name='DCDù*ù*', age='16'}
+2024-10-25 14:30:35 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 12 players from the database
+2024-10-25 14:31:01 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 45
+2024-10-25 14:31:01 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 12 players from the database
+2024-10-25 14:31:39 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 5
+2024-10-25 14:31:39 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 5
+2024-10-25 14:31:49 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 12 players from the database
+2024-10-25 14:32:04 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player deleted with ID: 45
+2024-10-25 14:32:04 INFO  com.gameDev.consoleUI.PlayerUI - Deleted player with ID: 45
+2024-10-25 14:32:09 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 11 players from the database
+2024-10-25 14:32:23 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 14:32:23 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 14:32:31 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 83
+2024-10-25 14:32:31 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved game with ID: 83
+2024-10-25 14:35:05 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 14:35:05 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 14:35:39 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: raaaaadia
+2024-10-25 14:35:39 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: raaaaadia
+2024-10-25 14:35:50 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 7 tournaments from the database
+2024-10-25 14:49:39 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:49:39 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 14:49:39 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 14:49:40 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:49:41 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 14:49:41 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:49:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 14:50:01 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 14:50:01 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:50:01 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 14:50:01 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 14:50:01 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 14:50:01 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 14:50:01 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 14:50:01 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:50:01 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2373ad99] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 14:50:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:50:02 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 14:50:19 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:50:19 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 14:50:19 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 14:50:20 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:50:20 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 14:50:21 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:50:21 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 14:50:50 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 14:50:50 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 14:50:50 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 14:50:50 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 14:50:50 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 14:50:50 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 14:50:50 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 14:50:50 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 14:50:51 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2373ad99] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 14:50:51 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 14:50:51 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 15:05:26 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:05:26 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 15:05:26 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 15:05:27 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:05:28 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 15:05:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:05:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 15:06:04 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:06:04 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:06:04 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 15:06:04 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 15:06:04 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 15:06:04 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 15:06:04 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 15:06:04 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:06:04 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2373ad99] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:06:04 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:06:05 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 15:06:18 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: douaaaaaaaaaaaaaaaaae
+2024-10-25 15:06:18 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: douaaaaaaaaaaaaaaaaae
+2024-10-25 15:06:18 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: douaaaaaaaaaaaaaaaaae
+2024-10-25 15:06:18 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: douaaaaaaaaaaaaaaaaae
+2024-10-25 15:06:23 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 8 tournaments from the database
+2024-10-25 15:13:52 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:52 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 15:13:52 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 15:13:53 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:53 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 15:13:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team B
+2024-10-25 15:13:54 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:54 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 15:13:54 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1]
+2024-10-25 15:13:54 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 15:13:54 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 15:13:54 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 15:13:54 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:54 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7f608e21] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:13:54 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@57fbc06f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:13:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team B
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team C
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team C
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Fetching all teams
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved 2 teams from the database
+2024-10-25 15:13:54 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:54 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team D
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team D
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Updating team: Updated Team D
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team updated: Updated Team D
+2024-10-25 15:13:54 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:13:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team A
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team E
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team E
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Deleting team with ID: 1
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team deleted with ID: 1
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:55 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 3
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game 3
+2024-10-25 15:13:55 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 4
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game 4
+2024-10-25 15:13:55 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 2 games from the database
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:55 INFO  c.g.service.impl.GameServiceImpl - Creating game: New Game
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: New Game
+2024-10-25 15:13:55 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 1
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved game with ID: 1
+2024-10-25 15:13:55 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:13:55 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Tournament A
+2024-10-25 15:13:55 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:55 INFO  c.g.s.impl.TournamentServiceImpl - Tournament deleted with ID: 1
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Fetching all teams
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Updating team: Updated Team
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Assign new team with ID: 2 for the player with ID: 1
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Deleting team with ID: 1
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:55 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team B
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team B
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Alice
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Bob
+2024-10-25 15:13:55 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 2 players from the database
+2024-10-25 15:13:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:55 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:56 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team D
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team D
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Dave
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player deleted with ID: 1
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:56 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team C
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team C
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Charlie
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player updated: Updated Charlie
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:13:56 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team A
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: John
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Updating game: Updated Game
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 1
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Deleting game with ID: 1
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 1
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game B
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game B
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 2 tournaments from the database
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game C
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game C
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: Updated Tournament A
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Updated Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game A
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game A
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: Tournament A
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:13:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:13:56 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:13:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:13:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:13:56 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game D
+2024-10-25 15:13:56 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game D
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament deleted with ID: 1
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Tournament deleted with ID: 1
+2024-10-25 15:13:56 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:13:56 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:14:12 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:14:12 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 15:14:12 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 15:14:13 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:14:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 15:14:14 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:14:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 15:14:47 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:14:47 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 15:14:47 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 15:14:47 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 15:14:47 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 15:14:47 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 15:14:47 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:14:47 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fcd7d3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:14:47 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:14:47 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 55
+2024-10-25 15:14:47 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 55
+2024-10-25 15:14:52 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 8 tournaments from the database
+2024-10-25 15:15:08 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:15:08 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:16:03 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:16:03 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 15:16:10 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: douae
+2024-10-25 15:16:10 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: douae
+2024-10-25 15:16:18 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:16:18 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:16:39 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:16:39 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:16:39 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 54
+2024-10-25 15:16:39 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 54
+2024-10-25 15:16:53 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:16:53 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:16:53 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 8
+2024-10-25 15:16:53 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 8
+2024-10-25 15:16:53 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team with ID 8 assigned to tournament with ID 75
+2024-10-25 15:16:53 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: douae
+2024-10-25 15:16:53 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: douae
+2024-10-25 15:17:00 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:17:00 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:17:54 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:17:54 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:17:54 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 8
+2024-10-25 15:17:54 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 8
+2024-10-25 15:17:54 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team removed from tournament with ID 75
+2024-10-25 15:17:54 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: douae
+2024-10-25 15:17:54 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: douae
+2024-10-25 15:18:01 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:18:01 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:18:20 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:18:20 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:19:05 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:19:05 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 15:19:09 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: HGCVKT
+2024-10-25 15:19:09 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: HGCVKT
+2024-10-25 15:19:53 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:19:53 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:21:42 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:21:42 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 15:21:42 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 15:21:43 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:21:43 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 15:21:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:21:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 15:21:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 15:21:56 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 15:21:56 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 15:21:56 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 15:21:56 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 15:21:56 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 15:21:57 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:21:57 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fcd7d3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:21:57 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:21:57 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:21:57 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:22:21 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:22:21 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 15:22:27 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: JHVJHYB
+2024-10-25 15:22:27 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: JHVJHYB
+2024-10-25 15:22:27 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: JHVJHYB
+2024-10-25 15:22:27 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: JHVJHYB
+2024-10-25 15:22:50 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 75
+2024-10-25 15:22:50 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 75
+2024-10-25 15:23:27 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:27 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 15:23:28 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 15:23:29 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:29 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 15:23:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:30 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:30 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team B
+2024-10-25 15:23:30 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:30 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 15:23:30 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1]
+2024-10-25 15:23:30 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 15:23:30 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 15:23:30 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 15:23:30 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:30 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@344e665a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:23:30 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b99f5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 15:23:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:30 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team B
+2024-10-25 15:23:30 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team C
+2024-10-25 15:23:30 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team C
+2024-10-25 15:23:30 INFO  c.g.service.impl.TeamServiceImpl - Fetching all teams
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved 2 teams from the database
+2024-10-25 15:23:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:31 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team D
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team D
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Updating team: Updated Team D
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team updated: Updated Team D
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:23:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:31 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team A
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:23:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:31 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team E
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team E
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Deleting team with ID: 1
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team deleted with ID: 1
+2024-10-25 15:23:31 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 1
+2024-10-25 15:23:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:31 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:31 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.GameDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:31 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 3
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game 3
+2024-10-25 15:23:31 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 4
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game 4
+2024-10-25 15:23:31 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:23:31 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 2 games from the database
+2024-10-25 15:23:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:31 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.GameDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:32 INFO  c.g.service.impl.GameServiceImpl - Creating game: New Game
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: New Game
+2024-10-25 15:23:32 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 1
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved game with ID: 1
+2024-10-25 15:23:32 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:23:32 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Tournament A
+2024-10-25 15:23:32 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:32 INFO  c.g.s.impl.TournamentServiceImpl - Tournament deleted with ID: 1
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 1
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Fetching all teams
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Updating team: Updated Team
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Assign new team with ID: 2 for the player with ID: 1
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Deleting team with ID: 1
+2024-10-25 15:23:32 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:32 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team B
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team B
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Alice
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Bob
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved 2 players from the database
+2024-10-25 15:23:32 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:32 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team D
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team D
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Dave
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player deleted with ID: 1
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:23:32 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:32 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:32 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team C
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team C
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: Charlie
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player updated: Updated Charlie
+2024-10-25 15:23:32 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:23:32 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:32 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Using in-memory database for testing.
+2024-10-25 15:23:33 INFO  c.g.service.impl.TeamServiceImpl - Creating team: Team A
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.TeamDaoImpl - Team saved: Team A
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: John
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 1
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Updating game: Updated Game
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game 1
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Deleting game with ID: 1
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 1
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 15:23:33 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:33 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game B
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game B
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved 2 tournaments from the database
+2024-10-25 15:23:33 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:33 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game C
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game C
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: Updated Tournament A
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Updated Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:23:33 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:33 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game A
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game A
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: Tournament A
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 15:23:33 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: TestGameDev]
+2024-10-25 15:23:33 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 15:23:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 15:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'TestGameDev'
+2024-10-25 15:23:33 INFO  c.g.service.impl.GameServiceImpl - Creating game: Game D
+2024-10-25 15:23:33 INFO  com.gameDev.dao.impl.GameDaoImpl - Game saved: Game D
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: Tournament A
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament deleted with ID: 1
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Tournament deleted with ID: 1
+2024-10-25 15:23:33 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 1
+2024-10-25 15:23:33 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 1
+2024-10-25 17:04:22 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 17:04:22 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 17:04:22 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 17:04:27 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 17:04:27 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 17:04:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 17:04:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 17:04:46 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 17:04:46 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 17:04:46 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 17:04:46 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 17:04:46 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 17:04:46 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 17:04:46 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 17:04:50 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 17:04:50 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4993febc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 17:04:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 17:04:50 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 15 games from the database
+2024-10-25 17:05:05 INFO  c.g.s.impl.TournamentServiceImpl - Tournament created: dddd
+2024-10-25 17:05:05 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament saved: dddd
+2024-10-25 17:05:05 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Tournament updated: dddd
+2024-10-25 17:05:05 INFO  c.g.s.impl.TournamentServiceImpl - Tournament updated: dddd

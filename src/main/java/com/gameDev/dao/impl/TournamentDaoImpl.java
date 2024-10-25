@@ -17,7 +17,7 @@ public class TournamentDaoImpl implements TournamentDao {
     private static final Logger logger = LoggerFactory.getLogger(TournamentDaoImpl.class);
 
     @Override
-    public void saveTournament(Tournament tournament) {
+    public int saveTournament(Tournament tournament) {
         EntityManager entityManager = JPAUtil.getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -25,6 +25,7 @@ public class TournamentDaoImpl implements TournamentDao {
             entityManager.persist(tournament);
             transaction.commit();
             logger.info("Tournament saved: {}", tournament.getTitle());
+            return tournament.getId();
         } catch (RuntimeException e) {
             if (transaction.isActive()) {
                 transaction.rollback();
