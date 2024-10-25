@@ -255,3 +255,71 @@ update games set difficulty=?, match_avg_duration=?, name=? where id=? [23505-20
 2024-10-25 11:10:44 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved 5 teams from the database
 2024-10-25 11:10:47 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Player saved: fff
 2024-10-25 11:10:47 INFO  com.gameDev.consoleUI.PlayerUI - Created new player: Player{id=14, name='fff', age='2222'}
+2024-10-25 11:16:59 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 11:16:59 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 11:17:00 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 11:17:04 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 11:17:05 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 11:17:05 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 11:17:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 11:17:13 INFO  c.g.service.impl.GameServiceImpl - Finding game with ID: 5
+2024-10-25 11:17:13 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 11:17:13 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 11:17:13 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 11:17:13 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 11:17:13 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 11:17:13 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 11:17:17 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 11:17:17 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fcd7d3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 11:17:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 11:17:17 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved game with ID: 5
+2024-10-25 11:17:17 INFO  c.g.service.impl.GameServiceImpl - Finding all games
+2024-10-25 11:17:17 INFO  com.gameDev.dao.impl.GameDaoImpl - Retrieved 16 games from the database
+2024-10-25 11:17:32 INFO  c.g.service.impl.GameServiceImpl - Updating game: free fire
+2024-10-25 11:17:32 INFO  com.gameDev.dao.impl.GameDaoImpl - Game updated: free fire
+2024-10-25 11:17:32 INFO  com.gameDev.consoleUI.GameUI - Updated game: Game{id=5, name='free fire', difficulty='20.0', matchAvgDuration=15.0}
+2024-10-25 11:17:39 INFO  c.g.service.impl.GameServiceImpl - Deleting game with ID: 5
+2024-10-25 11:17:39 INFO  com.gameDev.dao.impl.GameDaoImpl - Game deleted with ID: 5
+2024-10-25 11:17:39 INFO  com.gameDev.consoleUI.GameUI - Deleted game with ID: 5
+2024-10-25 11:22:41 INFO  c.g.service.impl.TeamServiceImpl - Assign new team with ID: 4 for the player with ID: 5
+2024-10-25 11:22:41 ERROR com.gameDev.dao.impl.TeamDaoImpl - Transaction rolled back for changing player team with ID: 5
+java.lang.NullPointerException: null
+	at com.gameDev.dao.impl.TeamDaoImpl.changePlayerTeam(TeamDaoImpl.java:120)
+	at com.gameDev.service.impl.TeamServiceImpl.changePlayerTeam(TeamServiceImpl.java:54)
+	at com.gameDev.consoleUI.TeamUI.changePlayerTeam(TeamUI.java:144)
+	at com.gameDev.consoleUI.TeamUI.start(TeamUI.java:45)
+	at com.gameDev.consoleUI.ConsoleUI.start(ConsoleUI.java:43)
+	at com.gameDev.Main.main(Main.java:11)
+2024-10-25 11:29:09 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 11:29:09 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2024-10-25 11:29:09 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-25 11:29:10 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 11:29:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-10-25 11:29:11 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 11:29:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'GameDev'
+2024-10-25 11:29:18 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: GameDev]
+2024-10-25 11:29:18 WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2024-10-25 11:29:18 INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:./gameDevdb;AUTO_SERVER=TRUE]
+2024-10-25 11:29:18 INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=sa, password=****}
+2024-10-25 11:29:18 INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2024-10-25 11:29:18 INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2024-10-25 11:29:18 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-10-25 11:29:19 INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2fcd7d3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-10-25 11:29:19 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-25 11:29:19 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 8
+2024-10-25 11:29:19 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 44
+2024-10-25 11:29:19 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 44
+2024-10-25 11:29:29 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 44
+2024-10-25 11:29:39 INFO  com.gameDev.dao.impl.PlayerDaoImpl - Retrieved player with ID: 8
+2024-10-25 11:29:39 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 8
+2024-10-25 11:29:39 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 8
+2024-10-25 11:29:39 INFO  c.g.service.impl.TeamServiceImpl - Assign new team with ID: 8 for the player with ID: 8
+2024-10-25 11:29:39 INFO  com.gameDev.dao.impl.TeamDaoImpl - Player with ID: 8 reassigned to team: 8
+2024-10-25 11:29:39 INFO  com.gameDev.consoleUI.TeamUI - Changed player ID 8 to team ID 8
+2024-10-25 11:30:01 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 4
+2024-10-25 11:30:01 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 4
+2024-10-25 11:30:01 INFO  c.g.service.impl.TeamServiceImpl - Fetching team with ID: 8
+2024-10-25 11:30:01 INFO  com.gameDev.dao.impl.TeamDaoImpl - Retrieved team with ID: 8
+2024-10-25 11:30:01 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Team with ID 8 assigned to tournament with ID 4
+2024-10-25 11:30:09 INFO  c.gameDev.dao.impl.TournamentDaoImpl - Retrieved tournament with ID: 4
+2024-10-25 11:30:09 INFO  c.g.s.impl.TournamentServiceImpl - Fetched tournament with ID: 4

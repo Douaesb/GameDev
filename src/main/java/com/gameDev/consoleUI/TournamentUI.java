@@ -185,7 +185,7 @@ public class TournamentUI {
     private Team getTeamIfExists(int teamId) {
         Team team = teamService.getTeamById(teamId);
         if (team == null) {
-            System.out.println("Tournament not found.");
+            System.out.println("team not found.");
         }
         return team;
     }

@@ -1,6 +1,8 @@
 package com.gameDev.consoleUI;
 
+import com.gameDev.entity.Player;
 import com.gameDev.entity.Team;
+import com.gameDev.service.PlayerService;
 import com.gameDev.service.TeamService;
 import com.gameDev.util.InputValidator;
 import org.slf4j.Logger;
@@ -14,10 +16,11 @@ public class TeamUI {
 
     private static final Logger logger = LoggerFactory.getLogger(TeamUI.class);
     private final TeamService teamService;
-
+    private final PlayerService playerService;
     public TeamUI(ApplicationContext context) {
         // Retrieve TeamService bean from application context
         this.teamService = (TeamService) context.getBean("teamService");
+        this.playerService = (PlayerService)  context.getBean("playerService");
     }
 
     public void start() {
@@ -131,18 +134,36 @@ public class TeamUI {
 
     private void deleteTeam() {
         int id = InputValidator.validatePositiveInteger("Enter the ID of the team you want to delete: ");
-
-        teamService.deleteTeam(id);
-        System.out.println("Team deleted successfully.");
-        logger.info("Deleted team with ID: {}", id);
+        if (getTeamIfExists(id) != null) {
+            teamService.deleteTeam(id);
+            System.out.println("Team deleted successfully.");
+            logger.info("Deleted team with ID: {}", id);
+        }
     }
 
     private void changePlayerTeam() {
         int playerId = InputValidator.validatePositiveInteger("Enter player ID: ");
         int newTeamId = InputValidator.validatePositiveInteger("Enter the new team ID: ");
+        if (getPlayerIfExists(playerId) != null && getTeamIfExists(newTeamId) != null) {
+            teamService.changePlayerTeam(playerId, newTeamId);
+            System.out.println("Player's team changed successfully.");
+            logger.info("Changed player ID {} to team ID {}", playerId, newTeamId);
+        }
+    }
 
-        teamService.changePlayerTeam(playerId, newTeamId);
-        System.out.println("Player's team changed successfully.");
-        logger.info("Changed player ID {} to team ID {}", playerId, newTeamId);
+    private Team getTeamIfExists(int teamId) {
+        Team team = teamService.getTeamById(teamId);
+        if (team == null) {
+            System.out.println("team not found.");
+        }
+        return team;
+    }
+
+    private Player getPlayerIfExists(int playerId) {
+        Player player = playerService.getPlayerById(playerId);
+        if (player == null) {
+            System.out.println("player not found.");
+        }
+        return player;
     }
 }
